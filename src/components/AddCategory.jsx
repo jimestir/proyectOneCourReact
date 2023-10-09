@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-function AddCategory () {
-  const [inputValue, setInputValue] = useState('Hola mundo')
+function AddCategory ({ onNewCategory }) {
+  const [inputValue, setInputValue] = useState('')
 
   const onInputChange = ({ target }) => {
     setInputValue(target.value)
@@ -9,11 +9,14 @@ function AddCategory () {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    console.log(inputValue)
+    const inputValueTrim = inputValue.trim()
+    if (inputValueTrim.length <= 1) return
+    onNewCategory(inputValue)
+    setInputValue('')
   }
   return (
     <form onSubmit={onSubmit}>
-      <input placeholder='Search Category' onChange={onInputChange} value={inputValue} type='text' />
+      <input placeholder='Search gifs...' onChange={onInputChange} value={inputValue} type='text' />
     </form>
   )
 }
