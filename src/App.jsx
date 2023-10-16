@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import AddCategory from './components/AddCategory'
+import GifGrid from './components/GifGrid'
+import './style.css'
 
 function App () {
   const [categories, setCategories] = useState([
@@ -28,9 +30,9 @@ function App () {
 
       {/* <button onClick={addCategory}>Add Categries</button> */}
       <ol>
-        <h3>Categories</h3>{' '}
-        {categories.map((category, i) => (
-          <li key={category}>{category}</li>
+        <h2>Categories</h2>
+        {categories.map((category) => (
+          <GifGrid key={category} category={category} />
         ))}
       </ol>
     </>

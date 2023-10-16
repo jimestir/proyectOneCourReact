@@ -1,3 +1,20 @@
 const API_KEY = 'ACfNj5a5Eb6pbSaNyHvxQTXQRJcxp3cl'
-const VALUE = 'dev'
-const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${VALUE}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+
+async function getGifs(category) {
+  const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${category}&limit=10`
+  try {
+    const request = await fetch(API_URL)
+    const { data = [] } = await request.json()
+
+    const gifs = data.map((img) => ({
+      id: img.id,
+      title: img.title,
+      url: img.images.downsized_medium.url
+    }))
+    return await gifs
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export { getGifs }
