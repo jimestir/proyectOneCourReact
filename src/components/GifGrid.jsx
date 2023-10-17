@@ -5,9 +5,9 @@ function GifGrid ({ category }) {
   const { images, isLoading } = useFetchGifs(category)
   return (
     <>
-      <h3>{category}</h3>
+      <h2 className='title-category'>{category}</h2>
       <LoadingMessage isLoading={isLoading} />
-      <div>
+      <div className='card-grid'>
         {images.map(images => <GifItem key={images.id} {...images} />)}
       </div>
 

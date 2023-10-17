@@ -29,7 +29,7 @@ function App () {
 
       {/* <button onClick={addCategory}>Add Categries</button> */}
       <ol>
-        <h2>Categories</h2>
+        <h3>Categories</h3>
         {categories.map((category) => (
           <GifGrid key={category} category={category} />
         ))}

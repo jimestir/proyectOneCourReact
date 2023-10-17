@@ -4,7 +4,10 @@
 }
 
 body {
-  padding: 60px;
+  /* width: 70ch; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
@@ -28,18 +31,17 @@ h3 {
 }
 
 .card-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-rows: masonry;
 }
 
 .card {
   align-content: center;
   align-items: center;
-  background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.07);
   display: flex;
   flex-direction: column;
   height: 0%;  
@@ -60,4 +62,7 @@ h3 {
 
 .card img {
   width: 100%;
+}
+.title-category {
+  border-bottom: 2px  rgb(97, 32, 158) solid ;
 }
