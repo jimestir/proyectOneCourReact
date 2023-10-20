@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in hook useFetchGifs() should has match with the snapshot 1`] = `undefined`;
