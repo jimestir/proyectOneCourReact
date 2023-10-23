@@ -5,7 +5,7 @@ describe('Test in GetGifs()', () => {
     const gifs = await getGifs('Rick and morty')
 
     expect(gifs.length).toBeGreaterThan(0)
-    console.log(gifs[0])
+    // console.log(gifs[0])
     expect(gifs[0]).toEqual({
       id: expect.any(String),
       title: expect.any(String),
