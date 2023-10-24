@@ -26,7 +26,7 @@
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll --detectOpenHandles"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json",
