@@ -35,7 +35,6 @@ describe('test in GifGrid.jsx', () => {
       isLoading: false
     })
     render(<GifGrid category={CATEGORY} />)
-    screen.debug()
     expect(screen.getAllByRole('img').length).toBe(2)
   })
 })

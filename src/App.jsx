@@ -12,7 +12,6 @@ function App () {
   // const addCategory = () => setCategories(cat => [...cat, 'rick and morty'])
   const onAddCategory = (onNewCategory) => {
     const conditional = categories.find((cat) => cat.toLowerCase() === onNewCategory.toLowerCase())
-    console.log(!conditional)
     if (conditional) return
 
     setCategories(cat => [...cat, onNewCategory])

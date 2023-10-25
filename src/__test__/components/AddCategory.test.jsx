@@ -6,7 +6,6 @@ describe('test in AddCategory.jsx', () => {
     render(<AddCategory onNewCategory={() => {}} />)
     const input = screen.getByRole('textbox')
     fireEvent.input(input, { target: { value: 'rick and morty' } })
-    // screen.debug()
     expect(input.value).toBe('rick and morty')
   })
 

@@ -14,10 +14,8 @@ describe('Test in hook useFetchGifs()', () => {
   })
   test('should has two props, url end title', () => {
     render(<GifItem {...GIF} />)
-    // screen.debug()
     // expect(screen.getByAltText(/hello i am Ric/i).alt).toBe(GIF.title)
     // expect(screen.getByAltText(/Hello i am Rick/).src).toBe(GIF.url)
-    // console.log(screen.getByRole('img').src)
     const { src, alt } = screen.getByRole('img')
     expect(src).toBe(GIF.url)
     expect(alt).toBe(GIF.title)
